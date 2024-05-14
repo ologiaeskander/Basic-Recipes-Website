@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Recipe Finder</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#random-recipes">Can't decide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#all-recipes">Browse All Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+            <form class="d-flex" id="searchForm">
+                <input class="form-control me-2" type="search" placeholder="Search recipes" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Random Recipes Carousel -->
+<div id="random-recipes" class="container mt-5">
+    <h2>I can't decide what to eat! Give me a random recipe</h2>
+    <!-- Carousel for random recipes -->
+    <div id="randomCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Random recipe will be displayed here -->
+        </div>
+        <button class="carousel-control-prev btn-primary" type="button" data-bs-target="#randomCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next btn-primary" type="button" data-bs-target="#randomCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+
+<!-- All Recipes Section -->
+<div id="all-recipes" class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <h2>All Recipes</h2>
+            <!-- Pagination links will go here -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="pagination-container" class="d-flex justify-content-center"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="recipe-cards-container"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Search Modal -->
+<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="searchModalLabel">Search Recipes</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="searchForm">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="searchInput" placeholder="Enter recipe name">
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div id="searchResults" class="mt-3">
+            <!-- Search results will be displayed here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- About Footer -->
+<footer id="about" class="container mt-5">
+    <hr>
+    <p>&copy; 2022 Recipe Finder. All rights reserved.</p>
+    <p>Contact: info@recipefinder.com</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/myScript.js"></script>
+</body>
+</html>
